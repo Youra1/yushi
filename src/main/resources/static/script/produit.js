@@ -2,10 +2,10 @@ $(document)
 		.ready(
 				function() {
 
-					table = $('#tsalle')
+					table = $('#tproduit')
 							.DataTable({
 										ajax : {
-											url : "salles/all",
+											url : "produits/all",
 											dataSrc : ''
 										},
 										columns : [
@@ -16,13 +16,13 @@ $(document)
 													data : "code"
 												},
 												{
-													data : "type"
+													data : "nom"
 												},
 												{
-													data : "capacite"
+													data : "dateAchat"
 												},
 												{
-													data : "bloc.code"
+													data : "prix"
 												},
 												{
 													"render" : function() {
@@ -36,46 +36,26 @@ $(document)
 												} ]
 
 									});
-					$.ajax({
-						url:'/blocs/all',
-						type:'GET',
-						success : function(data) {
-							var option = '';
-							data.forEach(e=>{
-								option += '<option value ='+e.id+'>'+e.code+'</option>';
-							});
-							
-						$('#bloc').append(option);
-						},
-						error : function(jqXHR, textStatus,
-								errorThrown) {
-							console.log(textStatus);
-						}
-						
-					});
 
 					$('#btn').click(
 							function() {
 								var code = $("#code");
-								var type = $("#type");
-								var capacite = $("#capacite");
-								var bloc = $("#bloc");
-								
+								var nom = $("#nom");
+								var prix = $("#prix");
+								var dateAchat = $("#date");
 								if ($('#btn').text() == 'Ajouter') {
-									var m = {
+									var p = {
 										code : code.val(),
-										type : type.val(),
-										capacite : capacite.val(),
-										bloc : {
-											id : bloc.val()
-										}
+										nom : nom.val(),
+										dateAchat : dateAchat.val(),
+										prix : prix.val()
 									};
 
 									$.ajax({
-										url : 'salles/save',
+										url : 'produits/save',
 										contentType : "application/json",
 										dataType : "json",
-										data : JSON.stringify(m),
+										data : JSON.stringify(p),
 										type : 'POST',
 										async : false,
 										success : function(data, textStatus,
@@ -88,7 +68,7 @@ $(document)
 										}
 									});
 									$("#main-content").load(
-											"./page/salle.html");
+											"./page/produit.html");
 								}
 							});
 
@@ -123,7 +103,7 @@ $(document)
 															e.preventDefault();
 															$
 																	.ajax({
-																		url : 'salles/delete/'
+																		url : 'produits/delete/'
 																				+ id,
 																		data : {},
 																		type : 'DELETE',
@@ -164,46 +144,43 @@ $(document)
 								var id = $(this).closest('tr').find('td').eq(0)
 										.text();
 								;
-								var code = $(this).closest('tr').find('td').eq(1).text();
-								var type = $(this).closest('tr').find('td').eq(2).text();
-								var capacite = $(this).closest('tr').find('td').eq(3).text();
-								var bloc = $(this).closest('tr').find('td').eq(4).text();
-											
+								var code = $(this).closest('tr').find('td').eq(
+										1).text();
+								var nom = $(this).closest('tr').find('td')
+										.eq(2).text();
+								var prix = $(this).closest('tr').find('td').eq(
+										4).text();
+								var dateAchat = $(this).closest('tr')
+										.find('td').eq(3).text().replace(" ",
+												"T");
 								btn.text('Modifier');
 								$("#code").val(code);
-								$("#type").val(type);
-								$("#capacite").val(capacite);
-								var op = $('#bloc option').filter(function () { return $(this).html() == bloc; }).val();
-								$("#bloc").val(op);
+								$("#nom").val(nom);
 								$("#id").val(id);
-								
+								$("#prix").val(prix);
+								$("#date").val(dateAchat);
 								btn.click(function(e) {
 									e.preventDefault();
-									var m = {
+									var p = {
 										id : $("#id").val(),
 										code : $("#code").val(),
-										type : $("#type").val(),
-										capacite : $("#capacite").val(),
-										bloc : {
-											id : $("#bloc").val()
-											
-										}
+										nom : $("#nom").val(),
+										dateAchat : $("#date").val(),
+										prix : $("#prix").val()
 									};
 									if ($('#btn').text() == 'Modifier') {
 										$.ajax({
-											url : 'salles/save',
+											url : 'produits/save',
 											contentType : "application/json",
 											dataType : "json",
-											data : JSON.stringify(m),
+											data : JSON.stringify(p),
 											type : 'POST',
 											async : false,
 											success : function(data,
 													textStatus, jqXHR) {
 												table.ajax.reload();
 												$("#code").val('');
-												$("#type").val('');
-												$("#capacite").val('');
-											    $("#bloc").val('');
+												$("#nom").val('');
 												btn.text('Ajouter');
 											},
 											error : function(jqXHR, textStatus,
@@ -212,7 +189,7 @@ $(document)
 											}
 										});
 										$("#main-content").load(
-												"./page/salle.html");
+												"./page/produit.html");
 									}
 								});
 							});

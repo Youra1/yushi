@@ -27,7 +27,7 @@
 /* poppins-200italic - latin */
 @font-face {
   font-family: 'Poppins';
-  font-style: italic;
+  font-style: normal;
   font-weight: 200;
   src: url('../fonts/poppins/poppins-v5-latin-200italic.eot'); /* IE9 Compat Modes */
   src: local('Poppins ExtraLight Italic'), local('Poppins-ExtraLightItalic'),
@@ -40,7 +40,7 @@
 /* poppins-100italic - latin */
 @font-face {
   font-family: 'Poppins';
-  font-style: italic;
+  font-style: normal;
   font-weight: 100;
   src: url('../fonts/poppins/poppins-v5-latin-100italic.eot'); /* IE9 Compat Modes */
   src: local('Poppins Thin Italic'), local('Poppins-ThinItalic'),

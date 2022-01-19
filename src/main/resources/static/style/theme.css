@@ -41,11 +41,7 @@ Notes:	decreasing heading by 0.4em with every subsequent heading level
 /*-----------------------------------------------------*/
 /* ----- Normalize ----- */
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    
 }
 .text-mblack{
     color: #333;
@@ -356,8 +352,9 @@ section {
 
 .login-wrap {
     max-width: 540px;
-    padding-top: 8vh;
+    padding-top: 8;
     margin: 0 auto;
+	background-color: FloralWhite
 }
 
 .login-logo {
@@ -376,10 +373,12 @@ section {
     -moz-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+	background-color: FloralWhite
 }
 
 .login-checkbox label input[type="checkbox"] {
     margin-right: 8px;
+	background-color: FloralWhite
 }
 
 .login-checkbox > label > a {
@@ -951,6 +950,7 @@ section {
 
 .rs-select2--dark .select2-container .select2-selection--single .select2-selection__rendered {
     padding: 0;
+	background-color: GhostWhite
 }
 
 .rs-select2--dark .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -1528,7 +1528,7 @@ section {
 
 .account-dropdown .info .content .email {
     font-size: 13px;
-    color: #999;
+    color: Black;
     line-height: -webkit-calc(20/13);
     line-height: -moz-calc(20/13);
     line-height: calc(20/13);
@@ -1569,6 +1569,7 @@ section {
 
 .account-dropdown__body {
     padding: 12px 0;
+	background-color: Beige
 }
 
 .account-dropdown__footer {
@@ -3401,6 +3402,7 @@ section {
 .au-task--border .au-task-list {
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
+	background-color: Beige
 }
 
 .au-task--border .au-task__footer {
@@ -4051,16 +4053,17 @@ section {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    -webkit-transition: all .1s ease;
-    -o-transition: all .1s ease;
-    -moz-transition: all .1s ease;
-    transition: all .1s ease;
+    -webkit-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    transition: all 0.1s ease;
     pointer-events: none;
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+	background-color: LightCoral
 }
 
 .recent-report {

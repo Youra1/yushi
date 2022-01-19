@@ -39,8 +39,6 @@
                         <a href = "Fonction.php"><li class = "list-group-item"><i class="fa fa-table fa-fw"></i> Gestion des fonctions</li></a>
                         <a href = "Departement.php"><li class = "list-group-item active"><i class="fa fa-table fa-fw"></i> Gestion des departements</li></a>
                         <a href = "Pointage.php"><li class = "list-group-item"><i class="fa fa-table fa-fw"></i> Gestion des pointages</li></a>
-                        <a href = "Salle.php"><li class = "list-group-item"><i class="fa fa-table fa-fw"></i> Gestion des salles</li></a>
-                        
                     </ul>
                 </div>
             </div>

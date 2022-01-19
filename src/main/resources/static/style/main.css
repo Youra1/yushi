@@ -1,4 +1,4 @@
-﻿/*
+/*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
@@ -16,13 +16,14 @@ body {
 
 }
 #nav{
-    width:100%;
+    width: 100%;
     height: 60px;
+	background-color: rgb(128, 255, 255)
 
 }
 
 #nav a:link,#nav a:hover,#nav a:visited{
-    color: black;
+    color: rgb(0, 0, 160);
     text-decoration: none;
 }
 .leftSide{
@@ -36,6 +37,7 @@ body {
 .leftSide a:link,.leftSide a:hover,.leftSide a:visited{
     color: rgba(0, 0, 0, 0.90);
     text-decoration: none;
+	background-color: Lavender
 }
 .list-group a{
     border-bottom: 1.1px solid rgba(109, 118, 126, 0.20) ;
@@ -54,7 +56,8 @@ body {
 }
 #table-content{
     position: relative;
-    top:10px;
+    top: 10px;
+	background-color: FloralWhite
 }
 #table-content tr:hover{
     background-color:rgba(0, 0, 0, 0.08);
@@ -63,22 +66,24 @@ body {
     width: 45px;
     height: 45px;
     object-fit: cover;
+	background-color: DarkCyan
 }
 .row .col{
     margin-top: 8px;
     margin-bottom: 8px;
+	background-color: GhostWhite
 }
 .card{
     background-color: #ecf0f1;
 }
 button[data-toggle="collapse"]{
-    background-color: #ecf0f1;
+    background-color: Khaki;
     color: rgba(109, 118, 126, 0.95);
 
 }
 button[aria-expanded="true"]{
-    background-color: #bdc3c7;
-    color:black;
+    background-color: DarkCyan;
+    color: AliceBlue;
 }
 button[data-toggle="collapse"]:hover{
     background-color: #bdc3c7;
@@ -91,8 +96,8 @@ box-shadow: none;
     font-size: 80px;
 }
 .card-color{
-    background-color: #31353D;
-    color: white;
+    background-color: DarkKhaki;
+    color: DarkBlue;
 }
 .custom-select{
     height:34px;
@@ -100,7 +105,8 @@ box-shadow: none;
 
 .page-content{
     overflow: auto;
-    max-height: 100vh;
+    max-height: 100;
+	background-color: Cornsilk
 }
 
 .sidebar-menu li .active {

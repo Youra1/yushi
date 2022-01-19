@@ -5,53 +5,51 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Erreur</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Error</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Impossible de supprimer cette machine</p>
+                    <p>Impossible de supprimer la machine</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="card bg-white">
         <div class="card-header card-color">
-            <p class="h2 text-center text-uppercase font-weight-bold pt-2">Gestion des machines</p>
+            <p class="h2 text-center text-uppercase font-weight-bold pt-2">La Gestion des machines</p>
         </div>
         <div class="card-body container-fluid">
             <div class="row">
                 <div class="col-sm-6 mb-2">
-                    <label for="reference">Reference : </label>
+                    <label for="reference">La Reference : </label>
                     <input class="" type="text" id="id" hidden>
                     <input class="form-control" type="text" id="reference" required>
                 </div>
                 <div class="col-sm-6 mb-2">
-                    <label for="dateAchat">Date Achat : </label>
+                    <label for="dateAchat">La Date d'achat : </label>
+                    <input class="" type="date" id="id" hidden>
                     <input class="form-control" type="date" id="dateAchat" required>
                 </div>
                 </div>
                 
                  <div class="row">
                 <div class="col-sm-6 mb-2">
-                    <label for="prix">Prix : </label>
+                    <label for="prix">Le Prix : </label>
                     <input class="form-control" type="text" id="prix" required>
                 </div>
                 
                 <div class="col-sm-6 mb-2">
-                    <label for="marque">Marque : </label>
+                    <label for="marque">La Marque : </label>
                      <select  class="form-control"  id="marque" name="marque">
                      	<option value="0">choisir une option</option>
                      </select>
              </div>
-                
-            </div>
-                   <div class="row">
-                <div class="col-sm-6 mb-2">
-                    <label for="salle">salle : </label>
+             <div class="col-sm-6 mb-2">
+                    <label for="salle">La Salle : </label>
                      <select  class="form-control"  id="salle" name="salle">
-                     	<option value="0">choisir une option</option>
+                     	<option value="0">Veuillez choisir une option</option>
                      </select>
              </div>
                 
@@ -71,7 +69,7 @@
                             <th scope="col">Date Achat</th>
                             <th scope="col">Prix</th>
                             <th scope="col">Marque</th>
-                            <th scope="col">salle</th>
+                            <th scope="col">Salle</th>
                             <th scope="col">Supprimer</th>
                             <th scope="col">Modifier</th>
                         </tr>
